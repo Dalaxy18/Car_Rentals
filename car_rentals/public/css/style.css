@@ -1,0 +1,44 @@
+body{
+    background-color: gray;
+}
+
+.head{
+    border: 2px solid black;
+    margin: 1% 5% 1% 5%;
+    position: center;
+}
+.right{
+    text-align: right;
+    margin-right: 1%;
+
+}
+.top{
+    border: 2px solid black;
+    margin: 1% 5% 1% 5%;
+    position: center;
+    text-align: center;
+    word-spacing: 2px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mid{
+    border: 2px solid black;
+    margin: 1% 5% 1% 5%;
+    position: center;
+    height: 100%;
+}
+
+
+.botton{
+    border: 2px solid black;
+    margin: 1% 5% 1% 5%;
+    position: center;
+    text-align: center; 
+}
+a{
+    color: brown;
+}
+h1{
+    color: white;
+}
