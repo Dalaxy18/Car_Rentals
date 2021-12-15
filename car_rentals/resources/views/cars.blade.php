@@ -15,16 +15,16 @@
     <body>
         <div class="head">
             <span>
-                <h1><img src="/images/car2.png" width="150">Car Rentals</h1>
+                <h1><img src="/images/car2.png" width="150"><a style='color:orange' href="{{ url('') }}">Car Rentals</a></h1>
             @if (Route::has('login'))
                 <div class="right">
                     @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
+                        <a href="{{ url('logout') }}">Log out</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in | </a>
+                        <a href="{{ route('login') }}">Log in | </a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                            <a href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
                 </span>
@@ -39,17 +39,7 @@
                         <a href="">Kontakt</a>
             </div>
             <div class="mid">
-                <p>Tutaj będzie się wyświetlać zwartość zakładki w którą user kliknie</p>
-                <p>...</p>
-                <p>...</p>
-                <p>...</p>
-                <p>...</p>
-                <p>...</p>
-                <p>...</p>
-                <p>...</p>
-                <p>...</p>
-                <p>...</p>
-                <p>...</p>
+                <p>SELECT * FROM cars</p>
             </div>
             <div class="botton">
                 <p>Pracę wykonał: Arkadiusz Donica i Mikołaj Woźniak | Grupa: zIinz_3_K32_Inf (W10)</p>

@@ -23,6 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('welcome');
     }
+    public function logout(Request $request) {
+    Auth::logout();
+    return redirect('/login');
+}
 }
