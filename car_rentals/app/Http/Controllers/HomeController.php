@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Car;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -23,7 +24,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+    //  $test=Car::where('name','Audi')->first();
+    //  var_dump($test->reservations();die;
+      //  return view('welcome');
+      return view("welcome",[
+        "cars" => Car::all()
+      ]);
+
+
     }
     public function logout(Request $request) {
     Auth::logout();
