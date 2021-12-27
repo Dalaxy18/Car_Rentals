@@ -25,3 +25,19 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+Route::get('/cars', function () {
+    return view('cars');
+});
+
+Route::get('/reservation', function () {
+    return view('reservation');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});

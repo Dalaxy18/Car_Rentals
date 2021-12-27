@@ -39,14 +39,7 @@
                         <a href="{{ url('/contact') }}">Kontakt</a>
             </div>
             <div class="mid">
-                <p>Jesteśmy firmą, która posiada w swojej ofercie sportowe samochody. Jeżeli nie jestes pewien czy taki samochód na codzień by Ci odpowiadał
-                    wystarczy, że zarezerwujesz sobie samochód na jedną dobę lub więcej i sprawdź swoje wymagania co wymarzonego samochodu!
-                    Zachęcamy do oferty! W celu dokonania rezerwacji koniecznie jest zarejestrowanie na naszej stronie :) </p>
-                    <!--@foreach ($cars as $car)
-                        <p>This is my car {{ $car->name }}</p>
-                    @endforeach
-                   -->
-
+                <p>Tutaj widzisz wszystkie swoje rezerwacje</p>
             </div>
             <div class="botton">
                 <p>Pracę wykonał: Arkadiusz Donica i Mikołaj Woźniak | Grupa: zIinz_3_K32_Inf (W10)</p>

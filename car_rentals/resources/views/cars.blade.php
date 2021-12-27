@@ -15,7 +15,7 @@
     <body>
         <div class="head">
             <span>
-                <h1><img src="/images/car2.png" width="150"><a style='color:orange' href="{{ url('') }}">Car Rentals</a></h1>
+                <h1><img src="/images/car2.png" width="150"><a style='color:orange' href="{{ url('/welcome') }}">Car Rentals</a></h1>
             @if (Route::has('login'))
                 <div class="right">
                     @auth
@@ -33,10 +33,10 @@
             </div>
             <div class="top">
                     <p>
-                        <a href="">O nas</a> |
-                        <a href="">Nasze auta</a> |
-                        <a href="">Zarezerwuj</a> |
-                        <a href="">Kontakt</a>
+                        <a href="{{ url('/welcome') }}">O nas</a> |
+                        <a href="{{ url('/cars') }}">Nasze auta</a> |
+                        <a href="{{ url('/reservation') }}">Zarezerwuj</a> |
+                        <a href="{{ url('/contact') }}">Kontakt</a>
             </div>
             <div class="mid">
                 <p>SELECT * FROM cars</p>
