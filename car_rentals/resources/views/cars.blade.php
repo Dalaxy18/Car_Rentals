@@ -46,7 +46,7 @@
               <tr><td>{{ $car->name }}</td><td>{{ $car->model }}</td><td>{{ $car->Engine_capacity}} L</td><td>{{ $car->Horsepower}} KM</td><td>{{ $car->ShortDescription}}</td></tr>
 
                       @endforeach
-              <table>
+              </table>
             </div>
             <div class="botton">
                 <p>Pracę wykonał: Arkadiusz Donica i Mikołaj Woźniak | Grupa: zIinz_3_K32_Inf (W10)</p>
