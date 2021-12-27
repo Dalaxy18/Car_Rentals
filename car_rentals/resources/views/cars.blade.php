@@ -39,7 +39,14 @@
                         <a href="{{ url('/contact') }}">Kontakt</a>
             </div>
             <div class="mid">
-                <p>SELECT * FROM cars</p>
+              <h1>Nasze samochody</h1>
+              <table>
+                <tr><td>Marka</td><td>Model</td><td>Pojemność</td><td>KM</td><td>Opis</td></tr>
+              @foreach ($cars as $car)
+              <tr><td>{{ $car->name }}</td><td>{{ $car->model }}</td><td>{{ $car->Engine_capacity}} L</td><td>{{ $car->Horsepower}} KM</td><td>{{ $car->ShortDescription}}</td></tr>
+
+                      @endforeach
+              <table>
             </div>
             <div class="botton">
                 <p>Pracę wykonał: Arkadiusz Donica i Mikołaj Woźniak | Grupa: zIinz_3_K32_Inf (W10)</p>

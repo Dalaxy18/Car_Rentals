@@ -42,10 +42,9 @@
                 <p>Jesteśmy firmą, która posiada w swojej ofercie sportowe samochody. Jeżeli nie jestes pewien czy taki samochód na codzień by Ci odpowiadał
                     wystarczy, że zarezerwujesz sobie samochód na jedną dobę lub więcej i sprawdź swoje wymagania co wymarzonego samochodu!
                     Zachęcamy do oferty! W celu dokonania rezerwacji koniecznie jest zarejestrowanie na naszej stronie :) </p>
-                    <!--@foreach ($cars as $car)
-                        <p>This is my car {{ $car->name }}</p>
-                    @endforeach
-                   -->
+                  
+
+
 
             </div>
             <div class="botton">

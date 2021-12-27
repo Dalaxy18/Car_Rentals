@@ -18,6 +18,7 @@ use App\Http\Controllers\HomeController;
 //Route::get('/', function () {
     //return view('welcome');
 //});
+
 Route::get('/',[App\Http\Controllers\HomeController::class, 'index']);
 Auth::routes();
 
@@ -26,7 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-Route::get('/cars', function () {
+Route::get('/cars',[App\Http\Controllers\HomeController::class, 'index'], function () {
     return view('cars');
 });
 

@@ -27,7 +27,7 @@ class HomeController extends Controller
     //  $test=Car::where('name','Audi')->first();
     //  var_dump($test->reservations();die;
       //  return view('welcome');
-      return view("welcome",[
+      return view("cars",[
         "cars" => Car::all()
       ]);
 
