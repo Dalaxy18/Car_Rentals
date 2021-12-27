@@ -42,6 +42,8 @@ body{
     margin: 1% 5% 1% 5%;
     position: center;
     text-align: center;
+    background-color: black;
+    color:white;
 }
 a{
     color: orange;
@@ -49,4 +51,7 @@ a{
 table,tr,td{
 
   width: auto; margin-left: auto; margin-right: auto; border: 1px solid #000;
+}
+table{
+  margin-bottom: 15px;
 }
