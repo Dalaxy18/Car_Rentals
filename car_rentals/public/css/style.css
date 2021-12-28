@@ -55,3 +55,17 @@ table,tr,td{
 table{
   margin-bottom: 15px;
 }
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+.contact{
+    intput
+}
+input{
+    height: 20px;
+    width: 40%;
+    border: 1px black solid;
+    margin-bottom: 5px;
+}

@@ -39,12 +39,10 @@
                         <a href="{{ url('/contact') }}">Kontakt</a>
             </div>
             <div class="mid">
-                <p>Jesteśmy firmą, która posiada w swojej ofercie sportowe samochody. Jeżeli nie jestes pewien czy taki samochód na codzień by Ci odpowiadał
+                <h3>Jesteśmy firmą, która posiada w swojej ofercie sportowe samochody. Jeżeli nie jestes pewien czy taki samochód na codzień by Ci odpowiadał
                     wystarczy, że zarezerwujesz sobie samochód na jedną dobę lub więcej i sprawdź swoje wymagania co wymarzonego samochodu!
-                    Zachęcamy do oferty! W celu dokonania rezerwacji koniecznie jest zarejestrowanie na naszej stronie :) </p>
-                  
-
-
+                    Zachęcamy do oferty! W celu dokonania rezerwacji koniecznie jest zarejestrowanie na naszej stronie :) </h3>
+                    <img src="/images/car.jpg" style="weight: 400px; height:400px;"/>
 
             </div>
             <div class="botton">
