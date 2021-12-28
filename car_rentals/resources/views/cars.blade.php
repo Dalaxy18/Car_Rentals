@@ -43,7 +43,7 @@
               <table>
 
               @foreach ($cars as $car)
-              <tr><td rowspan="5"><img src="/images/{{ $car->id}}.jpg" style="weight: 150px; height:150px;"/></td><td>Marka:</td><td>{{ $car->name }}</td></tr>
+              <tr><td rowspan="5"><img class="imtab" src="/images/{{ $car->id}}.jpg" style="weight: 150px; height:150px;"/></td><td>Marka:</td><td>{{ $car->name }}</td></tr>
 	      <tr><td>Model:</td><td>{{ $car->model }}</td></tr>
 	      <tr><td>Pojemność:</td><td>{{ $car->Engine_capacity}}.0L</td></tr>
 		<tr><td>Moc:</td><td>{{ $car->Horsepower}} KM</td></tr>
