@@ -36,7 +36,16 @@ body{
     text-align: center;
 }
 
-
+.mid-home{
+    border: 2px solid black;
+    margin: 1% 5% 1% 5%;
+    position: center;
+    height: 500px;
+    background-image: url("/images/car1.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+    object-fit:fill;
+}
 .botton{
     border: 2px solid black;
     margin: 1% 5% 1% 5%;
@@ -79,3 +88,18 @@ input{
 	border: 3px solid #000;
 	object-fit:cover;
     }
+
+.hometxt{
+    border: 1px solid gold;
+    visibility: visible;
+    color: white;
+    transform-origin: 50% 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transform: translate(0px, 0px);
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 700px;
+    border-width: 3px;
+    border-radius: 15px 0px 15px 0px;
+}

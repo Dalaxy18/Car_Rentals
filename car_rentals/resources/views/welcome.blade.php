@@ -15,7 +15,7 @@
     <body>
         <div class="head">
             <span>
-                <h1><img src="/images/car2.png" width="150"><a style='color:orange' href="{{ url('/welcome') }}">Car Rentals</a></h1>
+                <h1><img src="/images/car2.png" width="150"><a style='color:orange' href="{{ url('/welcome') }}">AM - Cars</a></h1>
             @if (Route::has('login'))
                 $zm=1;
                 <div class="right">
@@ -39,11 +39,16 @@
                         <a href="{{ url('/reservation') }}">Zarezerwuj</a> |
                         <a href="{{ url('/contact') }}">Kontakt</a>
             </div>
-            <div class="mid">
-                <h3>Jesteśmy firmą, która posiada w swojej ofercie sportowe samochody. Jeżeli nie jestes pewien czy taki samochód na codzień by Ci odpowiadał
-                    wystarczy, że zarezerwujesz sobie samochód na jedną dobę lub więcej i sprawdź swoje wymagania co wymarzonego samochodu!
-                    Zachęcamy do oferty! W celu dokonania rezerwacji koniecznie jest zarejestrowanie na naszej stronie :) </h3>
-                    <img src="/images/car.jpg" style="weight: 400px; height:400px;"/>
+            <div class="mid-home">
+                <div class="hometxt">
+                <h3>Wypożyczalnia samochodów sportowych AM - Cars oferuje
+                     swoim klientom wynajem aut znanych marek do których należą topowe modele Audi RS, BMW seria M, Ford Mustang, Mercedes AMG, czy Dodge.
+                     Zapraszamy również do zapoznania się z ofertą wynajmu samochodów sportowych w naszej wypożyczalni.</h3>
+                </div>
+
+
+
+
 
             </div>
             <div class="botton">

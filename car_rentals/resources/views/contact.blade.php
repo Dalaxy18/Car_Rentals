@@ -15,7 +15,7 @@
     <body>
         <div class="head">
             <span>
-                <h1><img src="/images/car2.png" width="150"><a style='color:orange' href="{{ url('/welcome') }}">Car Rentals</a></h1>
+                <h1><img src="/images/car2.png" width="150"><a style='color:orange' href="{{ url('/welcome') }}">AM - Cars</a></h1>
             @if (Route::has('login'))
                 <div class="right">
                     @auth
