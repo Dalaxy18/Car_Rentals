@@ -90,7 +90,7 @@ input{
     }
 
 .hometxt{
-    border: 1px solid gold;
+    border: 1px solid orange;
     visibility: visible;
     color: white;
     transform-origin: 50% 50%;
@@ -102,4 +102,7 @@ input{
     width: 700px;
     border-width: 3px;
     border-radius: 15px 0px 15px 0px;
+    font-family: Times New Roman;
+    font-size: 20px;
+    padding: 10px;
 }

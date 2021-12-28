@@ -41,9 +41,9 @@
             </div>
             <div class="mid-home">
                 <div class="hometxt">
-                <h3>Wypożyczalnia samochodów sportowych AM - Cars oferuje
+                <p>Wypożyczalnia samochodów sportowych AM - Cars oferuje
                      swoim klientom wynajem aut znanych marek do których należą topowe modele Audi RS, BMW seria M, Ford Mustang, Mercedes AMG, czy Dodge.
-                     Zapraszamy również do zapoznania się z ofertą wynajmu samochodów sportowych w naszej wypożyczalni.</h3>
+                     Zapraszamy również do zapoznania się z ofertą wynajmu samochodów sportowych w naszej wypożyczalni.</p>
                 </div>
 
 
