@@ -50,12 +50,15 @@ a{
 }
 table,tr,td{
 
-  width: auto; margin-left: auto; margin-right: auto; border: 1px solid #000;
+  width: auto; margin-left: auto; margin-right: auto; border: 0px solid #000;
+  word-spacing: 3px;
 }
 table{
   margin-bottom: 15px;
 }
-
+td{
+  text-align: left;
+}
 #map {
   height: 400px;
   width: 100%;

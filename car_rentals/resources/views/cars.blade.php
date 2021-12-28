@@ -41,10 +41,14 @@
             <div class="mid">
               <h1>Nasze samochody</h1>
               <table>
-                <tr><td>Marka</td><td>Model</td><td>Pojemność</td><td>KM</td><td>Opis</td></tr>
-              @foreach ($cars as $car)
-              <tr><td>{{ $car->name }}</td><td>{{ $car->model }}</td><td>{{ $car->Engine_capacity}} L</td><td>{{ $car->Horsepower}} KM</td><td>{{ $car->ShortDescription}}</td></tr>
 
+              @foreach ($cars as $car)
+              <tr><td rowspan="5"><img src="/images/{{ $car->id}}.jpg" style="weight: 150px; height:150px;"/></td><td>Marka:</td><td>{{ $car->name }}</td></tr>
+	      <tr><td>Model:</td><td>{{ $car->model }}</td></tr>
+	      <tr><td>Pojemność:</td><td>{{ $car->Engine_capacity}}.0L</td></tr>
+		<tr><td>Moc:</td><td>{{ $car->Horsepower}} KM</td></tr>
+		<tr><td>Opis</td><td>{{ $car->ShortDescription}}</td></tr>
+    <tr style=" height:5px;"><td></td><td></td></tr>
                       @endforeach
               </table>
             </div>
