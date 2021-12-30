@@ -45,11 +45,6 @@
                      swoim klientom wynajem aut znanych marek do których należą topowe modele Audi RS, BMW seria M, Ford Mustang, Mercedes AMG, czy Dodge.
                      Zapraszamy również do zapoznania się z ofertą wynajmu samochodów sportowych w naszej wypożyczalni.</p>
                 </div>
-
-
-
-
-
             </div>
             <div class="botton">
                 <p>Pracę wykonał: Arkadiusz Donica i Mikołaj Woźniak | Grupa: zIinz_3_K32_Inf (W10)</p>

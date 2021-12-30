@@ -34,6 +34,7 @@ body{
     background-color: #D3DADA;
     height: auto;
     text-align: center;
+    font-family: Times New Roman;
 }
 
 .mid-home{
@@ -107,8 +108,34 @@ input{
     font-size: 20px;
     padding: 10px;
 }
-.tab_data{
+.tab_date{
 
-  width:120px;
-  border-left: 3px solid #000;
+ width: 250px;
+  text-align: center;
+  margin: 0px;
 }
+.tab_button{
+  width: auto;
+  margin: 5px;
+  height: 17px;
+  border-radius:10px;
+  background-color:orange ;
+}
+.tab_button2{
+  width: auto;
+  margin-top: 55px;
+  height: 18px;
+  background-color:yellowgreen;
+  color: black;
+  font-size:15px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.reserp{
+text-align: center;
+font-weight: bold;
+}
+.reserp2{
+  text-align: left;
+  font-weight: bold;
+  }
