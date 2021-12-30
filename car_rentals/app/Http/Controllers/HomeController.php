@@ -30,9 +30,25 @@ class HomeController extends Controller
       return view("cars",[
         "cars" => Car::all()
       ]);
+      return view("reservation",[
+        "cars" => Car::all()
+      ]);
 
 
     }
+    public function reserv()
+    {
+    //  $test=Car::where('name','Audi')->first();
+    //  var_dump($test->reservations();die;
+      //  return view('welcome');
+
+      return view("reservation",[
+        "cars" => Car::all()
+      ]);
+
+
+    }
+
     public function logout(Request $request) {
     Auth::logout();
     return redirect('/login');

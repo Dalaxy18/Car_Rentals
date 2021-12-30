@@ -31,7 +31,7 @@ Route::get('/cars',[App\Http\Controllers\HomeController::class, 'index'], functi
     return view('cars');
 });
 
-Route::get('/reservation', function () {
+Route::get('/reservation',[App\Http\Controllers\HomeController::class, 'reserv'], function () {
     return view('reservation');
 });
 
