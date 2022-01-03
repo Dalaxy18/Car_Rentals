@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Car;
+use App\Models\Reservation;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -24,13 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-    //  $test=Car::where('name','Audi')->first();
-    //  var_dump($test->reservations();die;
-      //  return view('welcome');
       return view("cars",[
-        "cars" => Car::all()
-      ]);
-      return view("reservation",[
         "cars" => Car::all()
       ]);
 
@@ -38,15 +34,21 @@ class HomeController extends Controller
     }
     public function reserv()
     {
-    //  $test=Car::where('name','Audi')->first();
-    //  var_dump($test->reservations();die;
-      //  return view('welcome');
-
       return view("reservation",[
         "cars" => Car::all()
       ]);
+    }
+    public function my_reserv()
+    {
+      // $user=Auth::id();
+      // return view("my_reserv",[
+      //   "reservations" => Reservation::all()
+      // ]);
 
-
+      $user=Auth::id();
+      return view("my_reserv",[
+        "reservations" => Reservation::where('id_customer',$user)->get()
+      ]);
     }
 
     public function logout(Request $request) {

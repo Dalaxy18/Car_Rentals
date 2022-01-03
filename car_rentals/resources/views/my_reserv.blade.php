@@ -44,7 +44,17 @@
                         <a href="{{ url('/contact') }}">Kontakt</a>
             </div>
             <div class="mid">
-                <h2>Twoja wiadomość została wysłana</h2>
+              <h1>Moje rezerwacje</h1>
+              <table>
+
+              @foreach ($reservations as $res)
+
+	      <tr><td>auto:</td><td>{{ $res->id_car }}</td></tr>
+	      <tr><td>rezerwacja:</td><td>{{ $res->Date_reservation}}</td></tr>
+		<tr><td>zwrot:</td><td>{{ $res->Date_return}} </td></tr>
+    <tr style=" height:5px;"><td></td><td></td></tr>
+                      @endforeach
+              </table>
             </div>
             <div class="botton">
                 <p>Pracę wykonał: Arkadiusz Donica i Mikołaj Woźniak | Grupa: zIinz_3_K32_Inf (W10)</p>

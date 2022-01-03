@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
 {
@@ -24,7 +25,8 @@ class ReservationController extends Controller
      */
     public function create()
     {
-        //
+
+
     }
 
     /**
@@ -35,7 +37,26 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user=Auth::id();
+        $id_car=$request->input("id_car");
+        $return_date=$request->input("return_car");
+        $rent_date=$request->input("rent_car");
+
+        // $reservation = new Reservation();
+        // $reservation->id_car = $id_car;
+        // $reservation->id_customer = $user;
+        // $reservation->Date_reservation = $rent_date;
+        // $reservation->Date_return = $return_date;
+        // $reservation->save();
+
+        $flight = Reservation::create([
+        'id_customer' => $user,
+        'id_car' => $id_car,
+        'Date_reservation' => $rent_date,
+        'Date_return' => $return_date
+]);
+        return redirect('/cars');
+
     }
 
     /**

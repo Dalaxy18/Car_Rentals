@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ReservationController;
 
 
 /*
@@ -27,12 +28,18 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
+//Route::get('create_reserv', '\App\Http\Controllers\ReservationController@create');
+Route::resource('reservations', '\App\Http\Controllers\ReservationController');
 Route::get('/cars',[App\Http\Controllers\HomeController::class, 'index'], function () {
     return view('cars');
 });
 
 Route::get('/reservation',[App\Http\Controllers\HomeController::class, 'reserv'], function () {
     return view('reservation');
+});
+
+Route::get('/my_reserv',[App\Http\Controllers\HomeController::class, 'my_reserv'], function () {
+    return view('my_reserv');
 });
 
 Route::get('/contact', function () {

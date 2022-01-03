@@ -35,7 +35,12 @@
                     <p>
                         <a href="{{ url('/welcome') }}">O nas</a> |
                         <a href="{{ url('/cars') }}">Nasze auta</a> |
-                        <a href="{{ url('/reservation') }}">Zarezerwuj</a> |
+                        @if (Route::has('login'))
+                                @auth
+                                    <a href="{{ url('/reservation') }}">Zarezerwuj</a> |
+                                    <a href="{{ url('/my_reserv') }}">Moje rezerwacje</a> |
+                              @endauth
+                        @endif
                         <a href="{{ url('/contact') }}">Kontakt</a>
             </div>
             <div class="mid">
