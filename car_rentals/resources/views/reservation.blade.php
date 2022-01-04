@@ -65,7 +65,7 @@
                      <tr><td class="reserp2">Model:</td><td>{{ $car->model }}</td></tr>
                      <tr><td class="reserp2"> Pojemność:</td><td>{{ $car->Engine_capacity}}.0L</td></tr>
                      <tr><td class="reserp2">Moc:</td><td>{{ $car->Horsepower}} KM</td></tr>
-                     <tr><td class="reserp2">Opis</td><td>{{ $car->ShortDescription}}</td></tr>
+                     <tr><td class="reserp2">Opis:</td><td>{{ $car->ShortDescription}}</td></tr>
                      <tr style=" height:10px;"><td></td><td></td></tr>
                    </form>
                  @endforeach

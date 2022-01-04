@@ -34,7 +34,7 @@ body{
     background-color: #D3DADA;
     height: auto;
     text-align: center;
-    font-family: Times New Roman;
+    font-family: Ebrima;
 }
 
 .mid-home{
@@ -46,6 +46,18 @@ body{
     background-size: 100% 100%;
     text-align: center;
     object-fit:fill;
+}
+.mid-reservation{
+    border: 2px solid black;
+    margin: 1% 5% 1% 5%;
+    position: center;
+    height: 600px;
+    background-image: url("/images/parking1.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+    object-fit:fill;
+    color: black;
+    padding-top: 50px;
 }
 .botton{
     border: 2px solid black;
@@ -139,3 +151,37 @@ font-weight: bold;
   text-align: left;
   font-weight: bold;
   }
+ .tabres{
+     border: 2px solid orange;
+     weight: 10000px;
+     height: auto;
+     color: red;
+     border-radius: 0px 15px 0px 15px;
+     padding: 10px 10px 10px 10px;
+     font-size: 18px;
+     visibility: visible;
+     opacity: 1;
+     background-color: rgba(0, 0, 0, 0.5);
+     color:white;
+ }
+ .tdresv{
+     border: 1px solid black;
+     height: auto;
+     color: orange;
+     font-weight: bold;
+     column-width: 250px;
+     text-align: center;
+     font-family: Stencil;
+     font-size: 18px;
+ }
+ .tdresv2{
+     border: 1px solid black;
+     weight: 150%;
+     height: auto;
+     text-align: center;
+     font-family: Stencil;
+     font-size: 18px;
+ }
+.resfont{
+ font-family: Snap ITC;
+}

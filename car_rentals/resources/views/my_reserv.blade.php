@@ -43,16 +43,18 @@
                         @endif
                         <a href="{{ url('/contact') }}">Kontakt</a>
             </div>
-            <div class="mid">
-              <h1>Moje rezerwacje</h1>
-              <table>
+            <div class="mid-reservation">
+              <h2 class="resfont">Moje rezerwacje</h2>
+              <table class="tabres">
+
+                  <tr class="tdresv"><td class="tdresv">Auto</td><td class="tdresv">Data rezerwacji</td><td class="tdresv">Data zwrotu</td></tr>
 
               @foreach ($reservations as $res)
 
-	      <tr><td>auto:</td><td>{{ $res->id_car }}</td></tr>
-	      <tr><td>rezerwacja:</td><td>{{ $res->Date_reservation}}</td></tr>
-		<tr><td>zwrot:</td><td>{{ $res->Date_return}} </td></tr>
-    <tr style=" height:5px;"><td></td><td></td></tr>
+                  <tr><td class="tdresv2">{{ $res->id_car }}</td>
+    	          <td class="tdresv2">{{ $res->Date_reservation}}</td>
+    		      <td class="tdresv2">{{ $res->Date_return}}</td></tr>
+
                       @endforeach
               </table>
             </div>
