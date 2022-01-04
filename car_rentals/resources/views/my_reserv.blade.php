@@ -51,7 +51,7 @@
 
               @foreach ($reservations as $res)
 
-                  <tr><td class="tdresv2">{{ $res->id_car }}</td>
+                  <tr><td class="tdresv2">{{ $res->name }} {{ $res->model }}</td>
     	          <td class="tdresv2">{{ $res->Date_reservation}}</td>
     		      <td class="tdresv2">{{ $res->Date_return}}</td></tr>
 

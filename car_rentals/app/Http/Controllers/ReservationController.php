@@ -55,7 +55,7 @@ class ReservationController extends Controller
         'Date_reservation' => $rent_date,
         'Date_return' => $return_date
 ]);
-        return redirect('/cars');
+        return redirect('/my_reserv');
 
     }
 

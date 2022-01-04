@@ -17,7 +17,7 @@
             <span>
                 <h1><img src="/images/car2.png" width="150"><a style='color:orange' href="{{ url('/welcome') }}">AM - Cars</a></h1>
             @if (Route::has('login'))
-                $zm=1;
+                
                 <div class="right">
                     @auth
                         <a href="{{ url('logout') }}">Log out</a>

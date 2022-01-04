@@ -47,7 +47,10 @@ class HomeController extends Controller
 
       $user=Auth::id();
       return view("my_reserv",[
-        "reservations" => Reservation::where('id_customer',$user)->get()
+        "reservations" => Reservation::join('cars', 'id_car','cars.id')
+        ->where('id_customer',$user)
+        ->orderby('reservations.id','desc')
+        ->get()
       ]);
     }
 

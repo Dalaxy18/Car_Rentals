@@ -132,16 +132,18 @@ input{
   height: 17px;
   border-radius:10px;
   background-color:orange ;
+  font-weight: bold;
 }
 .tab_button2{
   width: auto;
   margin-top: 55px;
-  height: 18px;
-  background-color:yellowgreen;
-  color: black;
+  height: 19px;
+  background-color:black;
+  color: orange;
   font-size:15px;
   border: 1px solid black;
   border-radius: 10px;
+  font-weight: bold;
 }
 .reserp{
 text-align: center;
