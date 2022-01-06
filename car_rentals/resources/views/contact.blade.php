@@ -45,7 +45,7 @@
             </div>
             <div class="mid">
                 <h2>Kontakt do nas</h2>
-                <p>Car Rentals</p>
+                <p>AM - Cars</p>
                 <p>Adres: Powstańców Wielkopolskich 5, 61-895 Poznań</p>
                 <p>Telefon: 61 55 44 33</p>
                 <p>Nip: 783-154-73-45</p>
