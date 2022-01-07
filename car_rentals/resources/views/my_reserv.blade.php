@@ -47,13 +47,21 @@
               <h2 class="resfont">Moje rezerwacje</h2>
               <table class="tabres">
 
-                  <tr class="tdresv"><td class="tdresv">Auto</td><td class="tdresv">Data rezerwacji</td><td class="tdresv">Data zwrotu</td></tr>
+                  <tr class="tdresv">
+                      <td class="tdresv">Auto</td>
+                      <td class="tdresv">Data rezerwacji</td>
+                      <td class="tdresv">Data zwrotu</td>
+                      <td class="tdresv">Operacja</td>
+                  </tr>
 
               @foreach ($reservations as $res)
 
-                  <tr><td class="tdresv2">{{ $res->name }} {{ $res->model }}</td>
-    	          <td class="tdresv2">{{ $res->Date_reservation}}</td>
-    		      <td class="tdresv2">{{ $res->Date_return}}</td></tr>
+                  <tr>
+                      <td class="tdresv2">{{ $res->name }} {{ $res->model }}</td>
+    	              <td class="tdresv2">{{ $res->Date_reservation}}</td>
+    		          <td class="tdresv2">{{ $res->Date_return}}</td>
+                      <td class="tdresv2"><a href="delete/{{$res->id}}" style="color: white;">Delete</a></td>
+                  </tr>
 
                       @endforeach
               </table>

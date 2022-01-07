@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use DB;
 
 class ReservationController extends Controller
 {
@@ -99,8 +100,10 @@ class ReservationController extends Controller
      * @param  \App\Models\Reservation  $reservation
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reservation $reservation)
+    public function destroy($ids)
     {
-        //
+        $reserv = Reservation::where('id', $id)->firstorfail()->delete();
+          echo ("User Record deleted successfully.");
+          return redirect(my_reserv);
     }
 }

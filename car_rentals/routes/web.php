@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -40,6 +40,10 @@ Route::get('/reservation',[App\Http\Controllers\HomeController::class, 'reserv']
 
 Route::get('/my_reserv',[App\Http\Controllers\HomeController::class, 'my_reserv'], function () {
     return view('my_reserv');
+});
+
+Route::get('delete/{id}',[App\Http\Controllers\HomeController::class, 'del_reserv'], function() {
+    return view ('my_reserv');
 });
 
 Route::get('/contact', function () {
