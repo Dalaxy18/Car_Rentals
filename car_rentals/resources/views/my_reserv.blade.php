@@ -57,7 +57,7 @@
               @foreach ($reservations as $res)
 
                   <tr>
-                      <td class="tdresv2">{{ $res->name }} {{ $res->model }}</td>
+                      <td class="tdresv2">{{ $res->car->name }} {{ $res->car->model }}</td>
     	              <td class="tdresv2">{{ $res->Date_reservation}}</td>
     		          <td class="tdresv2">{{ $res->Date_return}}</td>
                       <td class="tdresv2"><a href="delete/{{$res->id}}" style="color: white;">Delete</a></td>

@@ -47,10 +47,9 @@ class HomeController extends Controller
 
       $user=Auth::id();
       return view("my_reserv",[
-          "reservations" => Reservation::join('cars', 'id_car','cars.id')
-        ->where('id_customer',$user)
-        ->orderby('reservations.id','desc')
-        ->get()
+          "reservations" => Reservation::where('id_customer',$user)
+          ->orderby('reservations.id','desc')
+          ->get()
       ]);
     }
 
@@ -60,7 +59,7 @@ class HomeController extends Controller
 }
     public function del_reserv($delete_id){
 
-        $delete = Reservation::where('id',$delete_id)->delete();
+        Reservation::destroy($delete_id);
 
             return redirect('my_reserv');
     }
