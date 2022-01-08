@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 14 Gru 2021, 22:30
+-- Czas generowania: 08 Sty 2022, 16:10
 -- Wersja serwera: 10.4.17-MariaDB
 -- Wersja PHP: 8.0.0
 
@@ -28,13 +28,24 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cars` (
-  `Id_car` int(11) NOT NULL,
-  `Name` varchar(40) NOT NULL,
-  `Model` varchar(40) NOT NULL,
-  `Engine_capacity` varchar(40) NOT NULL,
-  `Horsepower` varchar(40) NOT NULL,
-  `Short_description` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `model` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Engine_capacity` int(11) NOT NULL,
+  `Horsepower` int(11) NOT NULL,
+  `ShortDescription` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Zrzut danych tabeli `cars`
+--
+
+INSERT INTO `cars` (`id`, `name`, `model`, `Engine_capacity`, `Horsepower`, `ShortDescription`) VALUES
+(1, 'Audi', 'RS7', 4, 605, 'Innowacyjny pojazd gwarantuje dynamikę i jakość z jazdy'),
+(2, 'Ford', 'Mustang', 5, 450, 'Klasyk wśród najpotężniejszych samochodów sportowych'),
+(3, 'BMW', 'M2', 3, 410, 'Silnik z mocą 410 KM przyprawia o dreszcze'),
+(4, 'Dodge', 'Challenger', 3, 304, 'Prawdziwy pionier wśród mocarzy szosowych'),
+(5, 'Mercedes-Benz', 'CLA AMG', 2, 190, 'Auto dla prawdziwych miłośników klasy i komfortu');
 
 -- --------------------------------------------------------
 
@@ -69,10 +80,11 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_14_000001_create_personal_access_tokens_table', 1);
+(5, '2014_10_12_000000_create_users_table', 1),
+(6, '2014_10_12_100000_create_password_resets_table', 1),
+(7, '2019_08_19_000000_create_failed_jobs_table', 1),
+(8, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(9, '2021_12_21_184922_relations', 1);
 
 -- --------------------------------------------------------
 
@@ -107,16 +119,26 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `reservation`
+-- Struktura tabeli dla tabeli `reservations`
 --
 
-CREATE TABLE `reservation` (
-  `Id_reservation` int(11) NOT NULL,
-  `id_customer` int(11) NOT NULL,
-  `id_car` int(11) NOT NULL,
+CREATE TABLE `reservations` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `id_customer` bigint(20) UNSIGNED NOT NULL,
+  `id_car` bigint(20) UNSIGNED NOT NULL,
   `Date_reservation` date NOT NULL,
   `Date_return` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Zrzut danych tabeli `reservations`
+--
+
+INSERT INTO `reservations` (`id`, `id_customer`, `id_car`, `Date_reservation`, `Date_return`) VALUES
+(12, 1, 4, '2022-01-31', '2022-02-03'),
+(15, 1, 1, '2022-01-31', '2022-02-03'),
+(16, 1, 2, '2022-02-21', '2022-02-24'),
+(18, 1, 5, '2022-01-25', '2022-01-28');
 
 -- --------------------------------------------------------
 
@@ -140,8 +162,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Jan', 'jan@wp.pl', NULL, '$2y$10$AVLIPQN/XwJtQ/h.iwwhc.E4yp6TglX3nQAvpXWk2stIbGQTFwswS', NULL, '2021-12-14 11:07:00', '2021-12-14 11:07:00'),
-(2, 'Anna', 'anna@o2.pl', NULL, '$2y$10$imNUnEtQjZcYd9bdtF5Uk.vqDgN8U88dh5SETsGKjv2CqQgvVtVm.', NULL, '2021-12-14 11:18:39', '2021-12-14 11:18:39');
+(1, 'admin', 'admin@wp.pl', NULL, '$2y$10$7R53bztnO8XH9tf8jvtvKuPaeu2Lc0vBwrmENx4.nVesMEq.6r0Ru', NULL, '2021-12-21 19:40:12', '2021-12-21 19:40:12');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -151,7 +172,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 -- Indeksy dla tabeli `cars`
 --
 ALTER TABLE `cars`
-  ADD PRIMARY KEY (`Id_car`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeksy dla tabeli `failed_jobs`
@@ -181,10 +202,12 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Indeksy dla tabeli `reservation`
+-- Indeksy dla tabeli `reservations`
 --
-ALTER TABLE `reservation`
-  ADD PRIMARY KEY (`Id_reservation`);
+ALTER TABLE `reservations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `reservations_id_customer_foreign` (`id_customer`),
+  ADD KEY `reservations_id_car_foreign` (`id_car`);
 
 --
 -- Indeksy dla tabeli `users`
@@ -201,7 +224,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT dla tabeli `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `Id_car` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT dla tabeli `failed_jobs`
@@ -213,7 +236,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT dla tabeli `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT dla tabeli `personal_access_tokens`
@@ -222,16 +245,27 @@ ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `reservation`
+-- AUTO_INCREMENT dla tabeli `reservations`
 --
-ALTER TABLE `reservation`
-  MODIFY `Id_reservation` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `reservations`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Ograniczenia dla zrzutów tabel
+--
+
+--
+-- Ograniczenia dla tabeli `reservations`
+--
+ALTER TABLE `reservations`
+  ADD CONSTRAINT `reservations_id_car_foreign` FOREIGN KEY (`id_car`) REFERENCES `cars` (`id`),
+  ADD CONSTRAINT `reservations_id_customer_foreign` FOREIGN KEY (`id_customer`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
