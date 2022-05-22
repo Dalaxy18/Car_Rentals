@@ -46,6 +46,10 @@ Route::get('delete/{id}',[App\Http\Controllers\HomeController::class, 'del_reser
     return view ('my_reserv');
 });
 
+Route::get('/panel_admin', function () {
+    return view('panel_admin');
+});
+
 Route::get('/contact', function () {
     return view('contact');
 });

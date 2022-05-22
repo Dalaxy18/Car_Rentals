@@ -10,6 +10,18 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            table, th, td{
+                border: 1px solid black;
+                align: center;
+            }
+            p{
+                font-weight: bold;
+            }
+            .button{
+                border-radius: 20px;
+                border: 2px #228B22 solid;
+                background-color: #ADFF2F;
+            }
         </style>
     </head>
     <body>
@@ -17,7 +29,6 @@
             <span>
                 <h1><img src="/images/car2.png" width="150"><a style='color:orange' href="{{ url('/welcome') }}">AM - Cars</a></h1>
             @if (Route::has('login'))
-                
                 <div class="right">
                     @auth
                         <a href="{{ url('logout') }}">Log out</a>
@@ -45,12 +56,44 @@
                         @endif
                         <a href="{{ url('/contact') }}">Kontakt</a>
             </div>
-            <div class="mid-home">
-                <div class="hometxt">
-                <p>Wypożyczalnia samochodów sportowych AM - Cars oferuje
-                     swoim klientom wynajem aut znanych marek do których należą topowe modele Audi RS, BMW seria M, Ford Mustang, Mercedes AMG, czy Dodge.
-                     Zapraszamy również do zapoznania się z ofertą wynajmu samochodów sportowych w naszej wypożyczalni.</p>
-                </div>
+            <div class="mid">
+                <h1>Panel Administratora</h1>
+                <h3>Panel administratora pozwala na dodanie nowego samochodu do aktualnej oferty wypożyczalni znajdującej się w zakładce "Nasze auta"</h3>
+
+                <table>
+                    <tr>
+                        <th>Kolumna</th>
+                        <th>Wartość</th>
+                    </tr>
+                    <tr>
+                        <td><p>Marka:</p></td>
+                        <td><input type="text" style="width: 200px;"/></td>
+                    </tr>
+                    <tr>
+                        <td><p>Model:</p></td>
+                        <td><input type="text" style="width: 200px;"/></td>
+                    </tr>
+                    <tr>
+                        <td><p>Pojemność:</p></td>
+                        <td><input type="text" style="width: 200px;"/></td>
+                    </tr>
+                    <tr>
+                        <td><p>Moc:</p></td>
+                        <td><input type="text" style="width: 200px;"/></td>
+                    </tr>
+                    <tr>
+                        <td><p>Opis:</p></td>
+                        <td><input type="text" style="width: 200px;"/></td>
+                    </tr>
+                    <tr>
+                        <td><p>Zdjęcie:</p></td>
+                        <td><input type="file" style="width: 200px;"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><center><input type="submit" name="add" value="Dodaj do oferty" class="button"/></center></td>
+                    </tr>
+                </table>
+
             </div>
             <div class="botton">
                 <p>Pracę wykonał: Arkadiusz Donica i Mikołaj Woźniak | Grupa: zIinz_3_K32_Inf (W10)</p>

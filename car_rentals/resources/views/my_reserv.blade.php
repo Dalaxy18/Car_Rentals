@@ -39,6 +39,7 @@
                                 @auth
                                     <a href="{{ url('/reservation') }}">Zarezerwuj</a> |
                                     <a href="{{ url('/my_reserv') }}">Moje rezerwacje</a> |
+                                    <a href="{{ url('/panel_admin') }}">Panel-Admin</a> |
                               @endauth
                         @endif
                         <a href="{{ url('/contact') }}">Kontakt</a>
