@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Car;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use DB;
 
 class CarController extends Controller
 {
@@ -34,8 +36,25 @@ class CarController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+      {
+        
+
+      $name=$request->input("name");
+      $model=$request->input("model");
+      $eng_cap=$request->input("eng_cap");
+      $hrs_pow=$request->input("hrs_pow");
+      $s_des=$request->input("s_des");
+
+
+
+      $flight = Car::create([
+      'name' => $name,
+      'model' => $model,
+      'Engine_capacity' => $eng_cap,
+      'Horsepower' => $hrs_pow,
+      'ShortDescription' => $s_des,
+]);
+      return redirect('/cars');
     }
 
     /**

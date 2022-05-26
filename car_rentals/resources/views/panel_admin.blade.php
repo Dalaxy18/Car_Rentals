@@ -61,29 +61,31 @@
                 <h3>Panel administratora pozwala na dodanie nowego samochodu do aktualnej oferty wypożyczalni znajdującej się w zakładce "Nasze auta"</h3>
 
                 <table>
+                  <form action="/upload_car" method="post">
+                    @csrf
                     <tr>
                         <th>Kolumna</th>
                         <th>Wartość</th>
                     </tr>
                     <tr>
                         <td><p>Marka:</p></td>
-                        <td><input type="text" style="width: 200px;"/></td>
+                        <td><input type="text" name="name" style="width: 200px;"/></td>
                     </tr>
                     <tr>
                         <td><p>Model:</p></td>
-                        <td><input type="text" style="width: 200px;"/></td>
+                        <td><input type="text" name="model" style="width: 200px;"/></td>
                     </tr>
                     <tr>
                         <td><p>Pojemność:</p></td>
-                        <td><input type="text" style="width: 200px;"/></td>
+                        <td><input type="text" name="eng_cap" style="width: 200px;"/></td>
                     </tr>
                     <tr>
                         <td><p>Moc:</p></td>
-                        <td><input type="text" style="width: 200px;"/></td>
+                        <td><input type="text" name="hrs_pow" style="width: 200px;"/></td>
                     </tr>
                     <tr>
                         <td><p>Opis:</p></td>
-                        <td><input type="text" style="width: 200px;"/></td>
+                        <td><input type="text" name="s_des" style="width: 200px;"/></td>
                     </tr>
                     <tr>
                         <td><p>Zdjęcie:</p></td>
@@ -92,6 +94,7 @@
                     <tr>
                         <td colspan="2"><center><input type="submit" name="add" value="Dodaj do oferty" class="button"/></center></td>
                     </tr>
+                  </form>
                 </table>
 
             </div>

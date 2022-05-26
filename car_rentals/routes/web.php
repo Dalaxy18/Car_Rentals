@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReservationController;
-
+use App\Http\Controllers\CarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +30,7 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 //Route::get('create_reserv', '\App\Http\Controllers\ReservationController@create');
 Route::resource('reservations', '\App\Http\Controllers\ReservationController');
+Route::resource('upload_car', '\App\Http\Controllers\CarController');
 Route::get('/cars',[App\Http\Controllers\HomeController::class, 'index'], function () {
     return view('cars');
 });
