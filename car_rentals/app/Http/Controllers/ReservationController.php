@@ -43,13 +43,12 @@ class ReservationController extends Controller
         $return_date=$request->input("return_car");
         $rent_date=$request->input("rent_car");
 
-        // $reservation = new Reservation();
-        // $reservation->id_car = $id_car;
-        // $reservation->id_customer = $user;
-        // $reservation->Date_reservation = $rent_date;
-        // $reservation->Date_return = $return_date;
-        // $reservation->save();
+        if($return_date<$rent_date)
+        {
+           echo"błędne dane";
 
+        }
+else{
         $flight = Reservation::create([
         'id_customer' => $user,
         'id_car' => $id_car,
@@ -57,6 +56,7 @@ class ReservationController extends Controller
         'Date_return' => $return_date
 ]);
         return redirect('/my_reserv');
+}
 
     }
 
