@@ -17,7 +17,7 @@
             <span>
                 <h1><img src="/images/car2.png" width="150"><a style='color:orange' href="{{ url('/welcome') }}">AM - Cars</a></h1>
             @if (Route::has('login'))
-                
+
                 <div class="right">
                     @auth
                         <a href="{{ url('logout') }}">Log out</a>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="botton">
-                <p>Pracę wykonał: Arkadiusz Donica i Mikołaj Woźniak | Grupa: zIinz_3_K32_Inf (W10)</p>
+                <p>Pracę wykonał: Arkadiusz Donica i Mikołaj Woźniak | Grupa: zIinz_4_K32_Inf (W10)</p>
             </div>
     </body>
 </html>

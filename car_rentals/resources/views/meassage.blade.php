@@ -47,7 +47,7 @@
                 <h2>Twoja wiadomość została wysłana</h2>
             </div>
             <div class="botton">
-                <p>Pracę wykonał: Arkadiusz Donica i Mikołaj Woźniak | Grupa: zIinz_3_K32_Inf (W10)</p>
+                <p>Pracę wykonał: Arkadiusz Donica i Mikołaj Woźniak | Grupa: zIinz_4_K32_Inf (W10)</p>
             </div>
     </body>
 </html>
