@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 08 Sty 2022, 16:10
+-- Czas generowania: 10 Gru 2022, 12:13
 -- Wersja serwera: 10.4.17-MariaDB
 -- Wersja PHP: 8.0.0
 
@@ -45,7 +45,8 @@ INSERT INTO `cars` (`id`, `name`, `model`, `Engine_capacity`, `Horsepower`, `Sho
 (2, 'Ford', 'Mustang', 5, 450, 'Klasyk wśród najpotężniejszych samochodów sportowych'),
 (3, 'BMW', 'M2', 3, 410, 'Silnik z mocą 410 KM przyprawia o dreszcze'),
 (4, 'Dodge', 'Challenger', 3, 304, 'Prawdziwy pionier wśród mocarzy szosowych'),
-(5, 'Mercedes-Benz', 'CLA AMG', 2, 190, 'Auto dla prawdziwych miłośników klasy i komfortu');
+(5, 'Mercedes-Benz', 'CLA AMG', 2, 190, 'Auto dla prawdziwych miłośników klasy i komfortu'),
+(6, 'Volkswagen', 'Golf R', 3, 220, 'Miejskie ale równocześnie sportowe auto.');
 
 -- --------------------------------------------------------
 
@@ -135,10 +136,11 @@ CREATE TABLE `reservations` (
 --
 
 INSERT INTO `reservations` (`id`, `id_customer`, `id_car`, `Date_reservation`, `Date_return`) VALUES
-(12, 1, 4, '2022-01-31', '2022-02-03'),
 (15, 1, 1, '2022-01-31', '2022-02-03'),
 (16, 1, 2, '2022-02-21', '2022-02-24'),
-(18, 1, 5, '2022-01-25', '2022-01-28');
+(18, 1, 5, '2022-01-25', '2022-01-28'),
+(19, 2, 4, '2022-01-15', '2022-01-16'),
+(21, 1, 6, '2022-12-02', '2022-12-02');
 
 -- --------------------------------------------------------
 
@@ -162,7 +164,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@wp.pl', NULL, '$2y$10$7R53bztnO8XH9tf8jvtvKuPaeu2Lc0vBwrmENx4.nVesMEq.6r0Ru', NULL, '2021-12-21 19:40:12', '2021-12-21 19:40:12');
+(1, 'admin', 'admin@wp.pl', NULL, '$2y$10$7R53bztnO8XH9tf8jvtvKuPaeu2Lc0vBwrmENx4.nVesMEq.6r0Ru', NULL, '2021-12-21 19:40:12', '2021-12-21 19:40:12'),
+(2, 'Mikolaj', 'mikolaj@wp.pl', NULL, '$2y$10$TDnjpss5b7UrDF9Pw6TRLOHwdfV/bq4wxCStA6ggqNE9AeqWrA7au', NULL, '2022-01-15 15:48:30', '2022-01-15 15:48:30'),
+(3, 'Test', 'test@wp.pl', NULL, '$2y$10$xDBgmtrm6.7uO6u8OK4c/emQPeL6LemxlH1VSfYRGPKXBpAFhx3d2', NULL, '2022-01-15 16:24:31', '2022-01-15 16:24:31'),
+(4, 'Ola', 'ola@wp.pl', NULL, '$2y$10$D6V3R77.NednBrKXbljvjuxuSDX6APITJcVZ0paBnj3nXw8vyADrS', NULL, '2022-03-13 11:53:51', '2022-03-13 11:53:51');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -224,7 +229,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT dla tabeli `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT dla tabeli `failed_jobs`
@@ -248,13 +253,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT dla tabeli `reservations`
 --
 ALTER TABLE `reservations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Ograniczenia dla zrzutów tabel
